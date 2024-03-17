@@ -1,3 +1,4 @@
+
 echo "Enter a character:"
 read char
 
@@ -24,3 +25,4 @@ case "$char" in
         echo "$char is a special character."
         ;;
 esac
+
