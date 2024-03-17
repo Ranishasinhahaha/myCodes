@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# Read the number from the user
+echo "Enter a number:"
+read n
+
+# Check if the number is less than 2
+if [ $n -lt 2 ]
+then
+  echo "Number entered is not a prime number."
+  exit 0
+fi
+
+# Initialize a flag variable
+f=0
+
+# Loop from 2 to the square root of n
+for ((i=2; i*i<=n; i++))
+do
+  # Check if n is divisible by i
+  if [ $((n%i)) -eq 0 ]
+  then
+    # Set the flag to 1
+    f=1
+    # Break the loop
+    break
+  fi
+done
+
+# Check the flag valuif [ $f -eq 1 ]
+then
+  echo "$n is not a prime number."
+else
+  echo "$n is a prime number."
+fi
+
